@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Nicko Slider Example 3</title>
+		<meta author="Rajdeep Das">
+		<link rel="stylesheet" type="text/css" href="../src/nicko-slider.css">
+		<script
+	  src="../vendors/jquery-3.3.1.min.js"></script>
+	  <script src="../vendors/jquery-easing-1.4.1.min.js"></script>
+	  <script src="../src/nicko-slider.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<div class="outermost">
+			<div class="wrapper">
+				<div class="content-desc" style="font-family:Arial;padding:15px 30px">
+					<h2 style="margin-bottom: 20px">GOTO ANY DESIRED SLIDE WHENEVER YOU WANT</h2>
+				</div>
+				<section id="banner">
+					<div class="banner-item">
+						<img src="images/banner-image1.jpg" alt="item">
+					</div>
+					<div class="banner-item">
+						<img src="images/banner-image2.jpg" alt="item">
+					</div>
+					<div class="banner-item">
+						<img src="images/banner-image3.jpg" alt="item">
+					</div>
+					<div class="banner-item">
+						<img src="images/banner-image4.jpg" alt="item">
+					</div>
+				</section>
+				
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var banner = $("#banner").nickoSlider({
+					autoPlay: false,
+					transitionDuration: 400
+				});
+
+				setTimeout(function(){
+					banner.nickoGoTo(3);
+				}, 5000);
+				setTimeout(function(){
+					banner.nickoGoTo(1);
+				}, 10000);
+				
+			});
+		</script>
+	</body>
+</html>

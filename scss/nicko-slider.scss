@@ -1,0 +1,105 @@
+body,html{
+	margin: 0;
+	padding: 0;
+}
+.nicko-slider{
+	position: relative;
+	overflow: hidden;
+	max-height: 670px;
+	img{
+		width: 100%;
+		height: auto;
+	}
+	.nicko-slider-item{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		z-index: 0;
+		&:not(.active){
+			display: none;
+		}
+	}
+	.nicko-arrows{
+		position: absolute;
+	    left: 0;
+	    top: 50%;
+	    width: 100%;
+	    z-index: 10;
+	    .arrow{
+	    	position: absolute;
+	    	-webkit-transition: all .2s ease;
+	    	-moz-transition: all .2s ease;
+	    	transition: all .2s ease;
+	    	background-color: transparent;
+	    	font-size: 0;
+	    	background-repeat: no-repeat;
+	    	background-size: 95%;
+	    	background-position: center center;
+	    	border: none;
+	    	width: 45px;
+	    	height: 46px;
+	    	outline: none;
+	    	cursor: pointer;
+	    	opacity: .5;
+	    	&:hover{
+				opacity: .8;
+	    	}
+	    }
+	    .prev{
+	    	left:40px;
+	    	transform: translate(calc(-40px - 100%), -50%);
+	    	background-image: url(../icons/prev-chevron.svg);	
+	    }
+	    .next{
+	    	right:40px;
+	    	transform: translate(calc(40px + 100%), -50%);
+	    	background-image: url(../icons/next-chevron.svg);
+	    }
+	}
+	&:hover{
+		.prev{
+	    	transform: translate(0, -50%);
+	    }
+	    .next{
+	    	transform: translate(0, -50%);
+	    }
+	}
+	.nicko-dots{
+		position: absolute;
+		left: 0;
+		width: 100%;
+    	z-index: 10;
+    	bottom: 60px;
+    	text-align: center;
+    	padding: 0;
+    	height: 0;
+    	margin: 0;
+    	li{
+    		display: inline-block;
+    		margin: 0 5px;
+    		button{
+    			-webkit-border-radius: 50%;
+    			-moz-border-radius: 50%;
+    			border-radius: 50%;
+    			background-color: #000;
+    			opacity: .5;
+    			border: none;
+    			width: 20px;
+    			height: 20px;
+    			outline: none;
+    			cursor: pointer;
+    			-webkit-transition: all .2s ease;
+	    		-moz-transition: all .2s ease;
+	    		transition: all .2s ease;
+    			&:hover{
+    				opacity:.7;
+    			}
+    			&.active{
+    				opacity: .9;
+    			}
+    		}
+    	}
+	}
+}

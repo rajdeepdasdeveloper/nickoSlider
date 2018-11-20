@@ -1,0 +1,25 @@
+{
+  "requires": true,
+  "lockfileVersion": 1,
+  "dependencies": {
+    "grunt": "^1.0.3"
+  },
+  "name": "crossfade-slider",
+  "version": "1.0.0",
+  "main": "Gruntfile.js",
+  "directories": {
+    "example": "examples"
+  },
+  "devDependencies": {
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^3.0.0",
+    "grunt-contrib-uglify": "^4.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
